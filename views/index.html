@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" ng-app="blog">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <script src="includes/js/jquery-1.12.0.js"></script>
+    <script src="includes/js/angular.min.js"></script>
+    <script src="includes/js/controllers.js"></script>
+</head>
+<body ng-controller="PostList">
+    <ul>
+        <li ng-repeat="post in posts">
+                <span>{{post.title}}</span>
+                <p>{{post.content}}</p>
+        </li>
+    </ul>
+</body>
+</html>
