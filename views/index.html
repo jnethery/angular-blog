@@ -2,27 +2,19 @@
 <html lang="en" ng-app="blog">
 <head>
     <meta charset="utf-8">
-    <title>My HTML File</title>
+    <title>My HTML File</title>    
+    
     <script src="includes/js/jquery-1.12.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
     <script src="includes/js/controllers.js"></script>
-    
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <script src="bower_components/platform/platform.js"></script>
-    <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
-    <link href="bower_components/paper-header-panel/paper-header-panel.html" rel="import">
     <base href="/">
 </head>
-<body ng-controller="postListController" class="fullbleed layout vertical">
-    <paper-header-panel class="flex" mode="standard">
-        <paper-toolbar style="min-height:40px;">
-            <a href="/">Posts</a>
-            <a href="/test">Test</a>        
-        </paper-toolbar>
-        <div id="main" style="height:2000px;" class="content fit">
-            <div ng-view></div>
-        </div>
-    </paper-header-panel>
+<body ng-controller="postsListController" class="fullbleed layout vertical">
+    <div id="main" style="padding-left: 15px; padding-right: 15px; height:2000px;">
+        <a href="/">Posts</a>
+        <a href="/test">Tests</a>
+        <div ng-view></div>
+    </div>
 </body>
 </html>

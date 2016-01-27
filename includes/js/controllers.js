@@ -13,8 +13,8 @@ blog.config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 });
 
-blog.controller('postListController', function($scope, $http) {
-    $http.get('api/v1/getPost/1', {
+blog.controller('postsListController', function($scope, $http) {
+    $http.get('api/v1/getPosts', {
         params : { backend_request : 1 }
     }).
     success(function(data, status, headers, config) {
@@ -25,8 +25,8 @@ blog.controller('postListController', function($scope, $http) {
     });
 });
 
-blog.controller('postsListController', function($scope, $http) {
-    $http.get('api/v1/getPosts', {
+blog.controller('postListController', function($scope, $http) {
+    $http.get('api/v1/getPost/1', {
         params : { backend_request : 1 }
     }).
     success(function(data, status, headers, config) {

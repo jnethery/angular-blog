@@ -1,10 +1,9 @@
 <div>
-    <h1>Posts</h1>
-    <ul>
-        <li ng-repeat="post in posts">
+    <div ng-repeat="post in posts" elevation="1" style="margin-bottom: 15px;">
+        <div style="padding:2px; padding-left:15px; margin-top: 15px;">
             <h3>{{post.title}}</h3>
             <div>By {{post.authorFirst}} {{post.authorLast}}</div>
             <p>{{post.content}}</p>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
