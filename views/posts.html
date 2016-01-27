@@ -2,8 +2,9 @@
     <h1>Posts</h1>
     <ul>
         <li ng-repeat="post in posts">
-            <div>{{post.title}}</div>
-            <div>{{post.content}}</div>
+            <h3>{{post.title}}</h3>
+            <div>By {{post.authorFirst}} {{post.authorLast}}</div>
+            <p>{{post.content}}</p>
         </li>
     </ul>
 </div>

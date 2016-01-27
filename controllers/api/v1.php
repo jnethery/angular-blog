@@ -1,12 +1,20 @@
 <?php
 
 class API extends Controller
-{   
+{       
     public function getPosts()
     {
         header('Content-type: application/json');
         $post = App::loadClass('models/post/post.php');
         $posts = $post->getPosts();
+        echo json_encode($posts);
+    }
+    
+    public function getPost($id)
+    {
+        header('Content-type: application/json');
+        $post = App::loadClass('models/post/post.php');
+        $posts = $post->getPost($id);
         echo json_encode($posts);
     }
     
