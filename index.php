@@ -20,7 +20,7 @@ class App {
     }
     
     private function route() {
-        $params = explode('/', $_SERVER['REQUEST_URI']);
+        $params = explode('/', strtok($_SERVER["REQUEST_URI"],'?'));
         $filePath = $this->parseURL($params);
         $class = $this->loadClass($filePath);
         $this->executeMethod($class, $params);
@@ -28,7 +28,7 @@ class App {
     
     private function parseURL($params)
     {
-        if (empty($params[1])) {
+        if (!isset($_GET['backend_request']) || empty($params[1])) {
             $directory = self::$config['index_directory'];
             $controller = self::$config['index_controller'];
         } else {
